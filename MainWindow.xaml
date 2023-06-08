@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:PlanifApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Border 
+        Background="#272537"
+        CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+            Text="CANARDOS"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Foreground="WhiteSmoke"
+            FontSize="22">
+            </TextBlock>
+        </Grid>
+
         
-    </Grid>
+    </Border>
+
 </Window>
