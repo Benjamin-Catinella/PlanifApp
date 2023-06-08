@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PlanifApp.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +20,16 @@ namespace PlanifApp
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
+
         }
+
+
+
     }
 }
