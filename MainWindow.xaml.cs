@@ -23,6 +23,7 @@ namespace PlanifApp
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ModelViewWeather();
         }
     }
 }
