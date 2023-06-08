@@ -25,6 +25,8 @@ namespace PlanifApp
             TempMax = 45;
             RainProba = 56;
             Wind = 152;
+            
+            WeatherService.CallWebAPIAsync();
         }
     }
 }
