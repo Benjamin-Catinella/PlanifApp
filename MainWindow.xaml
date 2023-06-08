@@ -3,10 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PlanifApp"
+        xmlns:local="clr-namespace:PlanifApp" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="800"
+        d:DataContext="{d:DesignInstance Type=local:ViewModel}"
+        WindowStartupLocation="CenterScreen"
+       
+        >
+    
     <Grid>
-        
+    
+        <Button Content="{Binding BtnText}"
+                Height="40"
+                Width="200"
+                HorizontalAlignment="Left"
+                Margin="50,0,0,40"
+                VerticalAlignment="Bottom"
+                Command="{Binding IncrementCounterCommand}"
+                Click="Button_Click"
+                />
+        <TextBlock Text="{Binding Counter, Mode=OneWay}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="40"
+                   />
     </Grid>
+
+
+    
 </Window>
