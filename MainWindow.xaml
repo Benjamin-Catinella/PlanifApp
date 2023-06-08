@@ -10,25 +10,35 @@
         WindowStartupLocation="CenterScreen"
        
         >
-    
+
     <Grid>
-    
-        <Button Content="{Binding BtnText}"
+
+        <Button Content="{Binding BtnIncrease}"
                 Height="40"
                 Width="200"
                 HorizontalAlignment="Left"
                 Margin="50,0,0,40"
                 VerticalAlignment="Bottom"
                 Command="{Binding IncrementCounterCommand}"
-                Click="Button_Click"
                 />
-        <TextBlock Text="{Binding Counter, Mode=OneWay}"
+        <TextBlock Text="{Binding Counter}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="40"
+                   />
+
+        <Button Content="{Binding BtnDecrease}"
+                Height="40"
+                Width="200"
+                HorizontalAlignment="Right"
+                Margin="0,0,50,40"
+                VerticalAlignment="Bottom"
+                Command="{Binding DecreaseCounterCommand}"
+                />
+        <TextBlock Text="{Binding Counter}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="40"
                    />
     </Grid>
-
-
-    
 </Window>

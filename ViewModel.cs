@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace PlanifApp
@@ -19,16 +20,29 @@ namespace PlanifApp
         }
         public ViewModel()
         {
-            IncrementCounterCommand = new RelayCommand(IncrementCounter);
+            IncrementCounterCommand = new RelayCommand<object>(o => IncrementCounter(), o => true);
+            DecreaseCounterCommand = new RelayCommand<object>(o => DecreaseCounter(), o => true);
         }
-        private string _btnText = "Commander";
-        public string BtnText
+
+        private string _btnIncrease = "+";
+        public string BtnIncrease
         {
-            get { return _btnText; }
+            get { return _btnIncrease; }
             set
             {
-                _btnText = value;
-                OnPropertyChanged("BtnText");
+                _btnIncrease = value;
+                OnPropertyChanged("BtnIncrease");
+            }
+        }
+
+        private string _btnDecrease = "-";
+        public string BtnDecrease
+        {
+            get { return _btnDecrease; }
+            set
+            {
+                _btnDecrease = value;
+                OnPropertyChanged("BtnDecrease");
             }
         }
 
@@ -42,7 +56,10 @@ namespace PlanifApp
                 OnPropertyChanged("Counter");
             }
         }
-        public ICommand IncrementCounterCommand { get; }
+        public ICommand IncrementCounterCommand { get; private set;}
         private void IncrementCounter() => Counter++;
+
+        public ICommand DecreaseCounterCommand { get; private set; }
+        private void DecreaseCounter() => Counter--;
     }
 }
