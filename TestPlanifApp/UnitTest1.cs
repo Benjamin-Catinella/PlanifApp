@@ -4,16 +4,20 @@ namespace TestPlanifApp
     [TestClass]
     public class UnitTest
     {
+        // generate a call of object from ModelViewWeather.cs
+        ModelViewWeather modelWeather = new ModelViewWeather();
+
         [TestMethod]
         public void TestVille()
         {
             // Arrange
-            WeatherObject ModelWeather
-            string ville =
+            
+            string CityReceived = modelWeather.City;
+            string CityExpected = "Grenoble";
             // Act
 
             // Assert
-            Assert.AreEqual("Grenoble", modelWeather.City);
+            Assert.AreEqual(CityExpected, CityReceived);
         }
     }
 }
