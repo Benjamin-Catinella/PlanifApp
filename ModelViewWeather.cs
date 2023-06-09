@@ -7,13 +7,23 @@ using System.Threading.Tasks;
 
 namespace PlanifApp
 {
+    /// <summary>
+    /// View Model classe du projet.
+    /// </summary>
     public class ModelViewWeather : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Méthode permettant de mettre à jour la Vue lorsqu'une propriété est modifiée.
+        /// </summary>
+        /// <param name="propertyName"></param>
         public void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// Ensemble des propriétés utilisées dans la Vue.
+        /// </summary>
         public string City { get => ModelWeather.Forecast != null ? ModelWeather.City.Name : "Fail"; }
 
         public int TempMin { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Tmin : 0; }
@@ -44,7 +54,6 @@ namespace PlanifApp
             }
         }
 
-
         public ModelViewWeather() 
         {
             Task.Run(() =>
@@ -63,10 +72,7 @@ namespace PlanifApp
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-            }
-           
+            }  
         }
-
-        
     }
 }
