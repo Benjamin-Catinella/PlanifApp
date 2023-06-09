@@ -1,4 +1,5 @@
 ﻿<Window x:Class="PlanifApp.MainWindow"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -28,6 +29,18 @@
             Grid.RowSpan="2"
             Fill="#B0AAAA"
             Margin="25"/>
+
+        <Grid
+            Grid.Column="0"
+            Grid.Row="0">
+            <m:Map x:Name="myMap" 
+                   Mode="AerialWithLabels"
+                   CredentialsProvider="As9lb04b_2tfFePT7V11KhoBBZWkaVRLBJR-36MYE_BojEq0tyngegpL2auoZjkS"
+                   Center="45.166672,5.71667,0.0000" 
+                   ZoomLevel="12.000" 
+                   AnimationLevel="None" 
+                   Margin="25"/>
+        </Grid>
 
         <Grid 
             Grid.Column="1"
