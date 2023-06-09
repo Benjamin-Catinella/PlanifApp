@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PlanifApp
@@ -23,6 +21,7 @@ namespace PlanifApp
         public double RainProba { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Probarain : 50.5; }
 
         public double Wind { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Wind10m : 65; }
+
         
 
         private WeatherObject _modelWeather;
