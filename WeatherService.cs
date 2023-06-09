@@ -39,7 +39,7 @@ namespace PlanifApp
             else
             {
                 Console.WriteLine("Internal server Error");
-                return null;
+                return new WeatherObject();
             }
         }
     }

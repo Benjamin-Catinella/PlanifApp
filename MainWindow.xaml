@@ -33,7 +33,10 @@
             Grid.Column="1"
             Grid.RowSpan="2"
             Margin="25">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*"/>
@@ -43,36 +46,70 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
+
             
             <Label Content="{Binding City}" 
                    Foreground="Black"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    Grid.Row="1" 
+                   Grid.ColumnSpan="2"
+                   />
+            <Label Content="Temp min: " 
+                   Foreground="Black"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Grid.Row="2" 
+                   Grid.Column="0"
                    />
             <Label Content="{Binding TempMin}" 
                    Foreground="Black"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    Grid.Row="2" 
+                   Grid.Column="1"
+                   />
+            <Label Content="Temp max: " 
+                   Foreground="Black"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Grid.Row="3" 
+                   Grid.Column="0"
                    />
             <Label Content="{Binding TempMax}" 
                    Foreground="Black"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    Grid.Row="3" 
+                   Grid.Column="1"
+                   />
+            <Label Content="Pluie: " 
+                   Foreground="Black"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Grid.Row="4" 
+                   Grid.Column="0"
                    />
             <Label Content="{Binding RainProba}" 
                    Foreground="Black"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    Grid.Row="4" 
+                   Grid.Column="1"
+                   />
+            <Label Content="Vent (km/h): " 
+                   Foreground="Black"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   Grid.Row="5" 
+                   Grid.Column="0"
                    />
             <Label Content="{Binding Wind}" 
                    Foreground="Black"
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Center"
                    Grid.Row="5" 
+                   Grid.Column="1"
                    />
 
         </Grid>

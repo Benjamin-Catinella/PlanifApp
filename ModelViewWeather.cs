@@ -26,11 +26,11 @@ namespace PlanifApp
         /// </summary>
         public string City { get => ModelWeather.Forecast != null ? ModelWeather.City.Name : "Fail"; }
 
-        public int TempMin { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Tmin : 0; }
+        public int TempMin { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Tmin : Int32.MinValue; }
 
         public int TempMax { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Tmax : 100; }
 
-        public double RainProba { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Probarain : 50.5; }
+        public double RainProba { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Probarain : double.NaN; }
 
         public double Wind { get => ModelWeather.Forecast != null ? ModelWeather.Forecast.FirstOrDefault().Wind10m : 65; }
 
