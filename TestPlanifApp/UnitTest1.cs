@@ -1,11 +1,19 @@
+
 namespace TestPlanifApp
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestVille()
         {
+            // Arrange
+            WeatherObject ModelWeather
+            string ville =
+            // Act
+
+            // Assert
+            Assert.AreEqual("Grenoble", modelWeather.City);
         }
     }
 }
