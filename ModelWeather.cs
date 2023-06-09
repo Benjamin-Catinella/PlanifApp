@@ -35,6 +35,7 @@ namespace PlanifApp
         public double Probafog { get; set; }
         public double Probawind70 { get; set; }
         public double Probawind100 { get; set; }
+        public double Probarain { get; set; }
         public int Day { get; set; }
         public double Rr10 { get; set; }
         public double Rr1 { get; set; }

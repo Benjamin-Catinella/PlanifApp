@@ -10,7 +10,7 @@ namespace PlanifApp
 {
     public class WeatherService
     {
-        public static async Task CallWebAPIAsync()
+        public static async Task<WeatherObject> CallWebAPIAsync()
         {
             string url = "https://api.meteo-concept.com/api/forecast/";
             string request = "daily?latlng=45.166%2C5.716&insee=35238&world=false&start=1&end=1&token=f38a7dd53af4c45dd379dfcf7f65e975642c03d195aa47b6b7422985ddf34307";
@@ -26,10 +26,13 @@ namespace PlanifApp
             {
                 WeatherObject weather = await response.Content.ReadAsAsync<WeatherObject>();
                 Console.WriteLine(weather.City.Name);
+                Console.WriteLine(weather.Forecast[0].Probarain);
+                return weather;
             }
             else
             {
                 Console.WriteLine("Internal server Error");
+                return null;
             }
         }
     }
