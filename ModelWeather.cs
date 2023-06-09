@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace PlanifApp
 {
+    /// <summary>
+    /// Modèle des données récupérées via l'API.
+    /// </summary>
     public class ModelWeather
     {
 
     }
+
+    /// <summary>
+    /// Classe city et ses attributs.
+    /// </summary>
     public class City
     {
         public string Name { get; set; }
@@ -20,6 +27,9 @@ namespace PlanifApp
         public string CityName { get; set; }
     }
 
+    /// <summary>
+    /// Classe Forecast et ses attributs.
+    /// </summary>
     public class Forecast
     {
         public string Country { get; set; }
@@ -46,6 +56,9 @@ namespace PlanifApp
         public double Gustx { get; set; }
     }
 
+    /// <summary>
+    /// Classe WeatherObject et ses attributs.
+    /// </summary>
     public class WeatherObject
     {
         public City City { get; set; }
