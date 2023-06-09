@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanifApp", "PlanifApp.csproj", "{7C2AB8DD-D7CB-4ADD-BEDD-1F117BBD3EE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPlanifApp", "..\TestPlanifApp\TestPlanifApp.csproj", "{C0F9DD07-99C4-4EAB-97B4-463BC6536F80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7C2AB8DD-D7CB-4ADD-BEDD-1F117BBD3EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C2AB8DD-D7CB-4ADD-BEDD-1F117BBD3EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C2AB8DD-D7CB-4ADD-BEDD-1F117BBD3EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F9DD07-99C4-4EAB-97B4-463BC6536F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F9DD07-99C4-4EAB-97B4-463BC6536F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F9DD07-99C4-4EAB-97B4-463BC6536F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F9DD07-99C4-4EAB-97B4-463BC6536F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
